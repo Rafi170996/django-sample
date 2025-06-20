@@ -16,5 +16,4 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 COPY . .
 
-# Railway uses the $PORT environment variable
 CMD gunicorn sdd_project.wsgi:application --bind 0.0.0.0:$PORT
